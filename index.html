@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no" />
+    <title>Esri Leaflet App</title>
+    <!-- In the head -->
+    <link rel="stylesheet" href="https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-rc.8/css/calcite-web.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+        crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://js.arcgis.com/4.5/esri/css/main.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.0/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+        crossorigin="" />
+    
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.0.4/dist/MarkerCluster.Default.css">
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.0.4/dist/MarkerCluster.css">
+    <script type="text/javascript" src="dojoConfig.js"></script>
+    <script defer type="text/javascript" src="https://js.arcgis.com/4.5"></script>
+    <script src="https://unpkg.com/leaflet@1.3.0/dist/leaflet.js" integrity="sha512-C7BBF9irt5R7hqbUm2uxtODlUVs+IsNu2UULGuZN7gM+k/mmeG4xvIEac01BtQa4YIkUpp23zZC4wIwuXaPMQA=="
+        crossorigin=""></script>
+    <!-- Esri Leaflet -->
+    <script src="https://unpkg.com/esri-leaflet@2.1.2/dist/esri-leaflet.js" integrity="sha512-ouokQ1RIIoqPTZKwlapdxHO5VWFoAi8wE+SwhSX89Ifac0w3p+H2da4oqHvRsBTIpNLewzAZU7gRVDFXyXcfjA=="
+        crossorigin=""></script>    
+    
+</head>
+
+<body>
+    <!-- Incarcare resurse -->
+    <script src="https://rawgit.com/Leaflet/Leaflet.heat/gh-pages/dist/leaflet-heat.js"></script>
+    <script src="https://unpkg.com/esri-leaflet-heatmap@2.0.0"></script>
+    <script src="https://unpkg.com/leaflet.markercluster@1.0.4/dist/leaflet.markercluster.js"></script>
+    <script src="https://unpkg.com/esri-leaflet-cluster@2.0.0"></script>
+
+    <!-- Structura pagina -->
+    <div class="container-fluid h-100" id="mainDiv"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="block-group block-group-3-up tablet-block-group-2-up phone-block-group-1-up">
+                    <div class="card card-shaped block trailer-1">
+                        <figure class="card-image-wrap">
+                            <img class="card-image" src="./img/clustering.png" alt="Bridge Club, 1954">
+                        </figure>
+                        <div class="card-content">
+                            <a href="#" class="btn btn-clear btn-fill leader-1" id="btnCluster">Clustering</a>
+                        </div>
+                    </div>
+
+                    <div class="card card-shaped block trailer-1">
+                        <figure class="card-image-wrap">
+                            <img class="card-image" src="./img/heatmap.jpg" alt="Bridge Club, 1954">
+                        </figure>
+                        <div class="card-content">
+                            <a href="#" class="btn btn-clear btn-fill leader-1" id="btnHeatMap">HeatMap</a>
+                        </div>
+                    </div>
+                </div>   
+            </div>
+            <div id="textInput">
+                <div class="input-group">
+                    <input class="input-group-input" type="text" placeholder="Feature Service REST URL">
+                    <span class="input-group-button">
+                        <button class="btn" id="addServiceBtn">Add</button>
+                    </span>
+                </div>
+            </div>
+            <h2>
+                <a href="https://twitter.com/ialixandroae" target="_blank">Ionut Alixandroae</a>
+            </h2>
+        </div>
+    </div>
+    
+    <!-- Incarcare resurse -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            setTimeout(function () {
+                $('.col').fadeIn(400);
+            }, 500);
+        });
+    </script>
+</body>
+
+</html>
