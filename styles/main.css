@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300');
+
 /* Selectie tag-uri */
 html,
 body {
@@ -40,7 +42,7 @@ h2 {
     margin-top: 10%;
 }
 
-.col {
+.col- {
     top: 10px;
     right: 10px;
     height: 50%;
@@ -51,12 +53,27 @@ h2 {
 }
 
 .input-group{
+    font-family: 'Raleway', sans-serif;
     width: 80%;
 }
 
+.panel {
+    font-family: 'Raleway', sans-serif;
+    font-size: calc(0.5vw + 0.5vh + 0.5vmin);
+    margin: 0;
+    padding: 2px;
+    bottom: 0;
+    left: 0;
+    height: 11%;
+    float: right;
+    z-index: 1500;
+    position: absolute;
+}
+
+/* Selectie ID */
 #textInput {
-    top: 10%;
-    left: 10px;
+    top: 100px;
+    left: 1vw;
     height: 50%;
     float: right;
     z-index: 1500;
@@ -64,4 +81,30 @@ h2 {
 }
 
 
+@media (max-width: 1350px) {
+	.card-content a{
+        font-family: 'Raleway', sans-serif;
+        font-size: calc(0.5vw + 0.5vh + 0.5vmin);
+    }
+    #textInput{
+        height: 10%;
+    }
+}
 
+@media (max-width: 800px) {
+	.card-content a{
+        margin: 0;
+        padding: 0;
+        font-size: 5px;
+    }
+    #textInput{
+        height: 10%;
+    }
+}
+
+
+@media (max-width: 400px) {
+	.input-group{
+        width: 25%;
+    }
+}
