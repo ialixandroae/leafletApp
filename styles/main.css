@@ -61,10 +61,9 @@ h2 {
     font-family: 'Raleway', sans-serif;
     font-size: calc(0.5vw + 0.5vh + 0.5vmin);
     margin: 0;
-    padding: 2px;
     bottom: 0;
     left: 0;
-    height: 11%;
+    height: 15%;
     float: right;
     z-index: 1500;
     position: absolute;
